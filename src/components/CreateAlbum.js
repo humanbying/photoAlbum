@@ -47,6 +47,7 @@ export default class CreateAlbum extends Component {
     UserActions.deleteAlbum(id);
   }
 
+
   onSubmit(event) {
     event.preventDefault();
     let { albumName, image } = this.state;
@@ -62,7 +63,7 @@ export default class CreateAlbum extends Component {
       return (
         <div className="mainDiv" key={i}>
           <div className="photos" >
-            <img className="photo" width="100" src={album.image} />
+            <img className="photo"  width="100" src={album.image} />
               <div>
                 <div className='box'>
                 <button className="btn btn-danger" onClick={this.deleteAlbum.bind(null, album._id)}>x</button>
