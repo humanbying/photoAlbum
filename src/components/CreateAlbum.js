@@ -60,11 +60,11 @@ export default class CreateAlbum extends Component {
       return (
         <div className="mainDiv" key={i}>
           <div className="photos" >
-            <img className="photo" src={album.image} />
+            <img className="photo" width="100" src={album.image} />
               <div>
                 <div className='box'>
+                <button className="btn btn-danger" onClick={this.deleteAlbum.bind(null, album._id)}>x</button>
                 <p className="albumName">{album.albumName}</p>
-                <a className="deleteBtn" onClick={this.deleteAlbum.bind(null, album._id)}>x</a>
                 </div>
             </div>
           </div>
