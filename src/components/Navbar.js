@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import CreateAlbum from './CreateAlbum'
 // import UserStore from '../stores/UserStore'
 // import UserWelcome from './UserWelcome'
 // import UserActions from '../actions/UserActions'
@@ -51,7 +50,6 @@ export default class Navbar extends Component {
               {/* <UserWelcome profile={profile}/> */}
 
               <ul className="nav navbar-nav navbar-right container-fluid">
-              <CreateAlbum />
               {/* <UserAvatar profile={profile} />
               <StatusButtons profile={profile}/> */}
               </ul>
