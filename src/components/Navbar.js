@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import CreateAlbum from './CreateAlbum'
 // import UserStore from '../stores/UserStore'
 // import UserWelcome from './UserWelcome'
 // import UserActions from '../actions/UserActions'
@@ -44,14 +45,14 @@ export default class Navbar extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              {/* <Link className="navbar-brand" to='/'><b>Rubber Ducky</b></Link> */}
+              <Link className="navbar-brand" to='/'><b>Albums</b></Link>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               {/* <UserWelcome profile={profile}/> */}
 
               <ul className="nav navbar-nav navbar-right container-fluid">
-              {/* <UserWelcome profile={profile} />
-              <UserAvatar profile={profile} />
+              <CreateAlbum />
+              {/* <UserAvatar profile={profile} />
               <StatusButtons profile={profile}/> */}
               </ul>
             </div>
