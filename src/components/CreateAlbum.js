@@ -64,7 +64,8 @@ export default class CreateAlbum extends Component {
               <div>
                 <div className='box'>
                 <button className="btn btn-danger" onClick={this.deleteAlbum.bind(null, album._id)}>x</button>
-                <p className="albumName">{album.albumName}</p>
+                <p>Image Name:{album.albumName}</p>
+                <p>Created At:{album.createdAt}</p>
                 </div>
             </div>
           </div>

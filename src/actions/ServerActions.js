@@ -4,9 +4,6 @@ import Constants from '../Constants';
 console.log("ServerActions")
 const ServerActions = {
 
-  //////////////////////////////////
-  /////// Album /////////////////
-
   receiveAlbum(album) {
     AppDispatcher.dispatch({
       type: Constants.RECEIVE_ALBUM,
