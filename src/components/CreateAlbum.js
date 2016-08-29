@@ -16,6 +16,7 @@ export default class CreateAlbum extends Component {
     this.changeTaskInput = this.changeTaskInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.deleteAlbum = this.deleteAlbum.bind(this);
+    this.editAlbum = this.editAlbum.bind(this);
   }
 
   componentDidMount() {
@@ -38,7 +39,9 @@ export default class CreateAlbum extends Component {
     });
   }
 
-
+  editAlbum(id) {
+    UserActions.editAlbum(id);
+  }
 
   deleteAlbum(id) {
     UserActions.deleteAlbum(id);
@@ -53,7 +56,6 @@ export default class CreateAlbum extends Component {
       album: AlbumStore.get()
     });
   }
-
   render() {
     let {albumName, image} = this.state;
     let Album = this.state.albums.map((album, i) => {
@@ -64,8 +66,9 @@ export default class CreateAlbum extends Component {
               <div>
                 <div className='box'>
                 <button className="btn btn-danger" onClick={this.deleteAlbum.bind(null, album._id)}>x</button>
-                <p>Image Name:{album.albumName}</p>
-                <p>Created At:{album.createdAt}</p>
+                <button className="btn btn-primary" onClick={this.editAlbum.bind(null, album._id)}>edit</button>
+                <p>Image Name: {album.albumName}</p>
+                <p>Created At: {album.createdAt}</p>
                 </div>
             </div>
           </div>
